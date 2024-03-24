@@ -36,7 +36,6 @@ CORE_IMAGE_BASE_INSTALL:append = " \
     iproute2 \
     iproute2-ip \
     jq \
-    kernel-devsrc \
     kernel-modules \
     ldd \
     less \
@@ -47,7 +46,6 @@ CORE_IMAGE_BASE_INSTALL:append = " \
     networkmanager \
     openssh-sftp-server \
     ostree-customize-plymouth \
-    ostree-devicetree-overlays \
     packagegroup-core-full-cmdline-multiuser \
     packagegroup-core-full-cmdline-utils \
     rsync \

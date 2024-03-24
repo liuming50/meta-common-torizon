@@ -16,6 +16,7 @@ RDEPENDS:${PN} += "bash coreutils jq util-linux mmc-utils sed u-boot-fw-utils"
 RDEPENDS:${PN}:remove:genericx86-64 = "u-boot-fw-utils"
 RDEPENDS:${PN}:remove:qemux86-64 = "u-boot-fw-utils"
 RDEPENDS:${PN}:remove:intel-corei7-64 = "u-boot-fw-utils"
+RDEPENDS:${PN}:remove:tegra = "u-boot-fw-utils"
 
 do_install:append () {
     install -m 0700 -d ${D}${libdir}/sota/conf.d

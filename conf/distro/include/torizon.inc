@@ -53,7 +53,7 @@ IMAGE_BOOT_FILES_REMOVE:append:apalis-imx8 = " hdmitxfw.bin dpfw.bin"
 DISTRO_FEATURES:append = " virtualization stateless-system"
 # FIXME: We need the opengl for beagleplay, but this can be an issue for
 # upstream, so I'm comenting here to not forget in the next rebase
-DISTRO_FEATURES:remove = "3g alsa irda pcmcia nfc ldconfig pulseaudio wayland x11 ptest multiarch vulkan"
+DISTRO_FEATURES:remove = "wayland x11 ptest vulkan"
 
 # FIXME: This can be an issue for the upstream, so we are only commenting
 # instead of removing it.
@@ -72,10 +72,10 @@ USERADD_ERROR_DYNAMIC = "skip"
 # Compatibility with toradex layers
 BBMASK += " \
     /meta-toradex-bsp-common/recipes-core/systemd/systemd_%.bbappend \
-    /meta-freescale/recipes-graphics/cairo \
-    /openembedded-core/meta/recipes-devtools/cargo \
-    /openembedded-core/meta/recipes-devtools/rust \
-    /openembedded-core/meta/recipes-connectivity/connman \
+    /poky/meta/recipes-devtools/cargo \
+    /poky/meta/recipes-devtools/rust \
+    /poky/meta/recipes-connectivity/connman \
+    /meta-updater/recipes-connectivity/connman \
 "
 
 # machines where TorizonCore is experimental
